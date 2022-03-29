@@ -1,0 +1,127 @@
+
+body{
+    font-family: 'Quicksand',sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c2cfcf;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header h1{
+    font-size: 24px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 84%;
+    background-color: #000077;
+    color: whitesmoke;
+    border-radius: 8px;
+    padding: 4px;
+    margin: 8px;
+    font-weight: bold;
+}
+
+.header p{
+    margin-left: 16px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding: 28px;
+    background-color: #333ccc;
+    border-radius: 8px;
+}
+
+article{
+    width:300px;
+    height: 300px;
+    margin: 12px;
+    background-color: #878787;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+}
+
+article h2{
+    font-size: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container .cuadrado,
+.container .triangulo,
+.container .circulo {
+    color: #000033;
+}
+
+.container .cuadrado label,
+.container .triangulo label,
+.container .circulo label {
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+.container .cuadrado input,
+.container .triangulo input,
+.container .circulo input {
+    margin: 4px 0 8px 0;
+    border: none;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-align: center;
+    color: #500050;
+}
+
+.container .cuadrado button,
+.container .triangulo button,
+.container .circulo button {
+    border: none;
+    margin: 8px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: #005000;
+    color: wheat;
+}
+
+button:hover{
+    font-weight: bold;
+}
+
+.lados-tri{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.lados-tri input {
+    width: 54px;
+    text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
