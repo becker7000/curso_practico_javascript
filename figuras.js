@@ -11,9 +11,9 @@ function areaCuadrado(lado){
 
 //Encapsulando la formula general de Héron para obtener la altura 
 // de un triángulo a tráves de sus lados.
-function alturaTriangulo(lado1, lado2,base){
+function alturaTriangulo(lado1,lado2,base){
     const s=(lado1+lado2+base)/2;
-    const altura = (2/base)*(Math.sqrt(s*(s-lado1)*(s-lado2)*(s-base)));
+    const altura=(2/base)*(Math.sqrt(s*(s-lado1)*(s-lado2)*(s-base)));
     return altura;
 }
 
@@ -23,8 +23,8 @@ function perimetroTriangulo(lado1,lado2,base){
 }
 
 //Encapsulando la formula del área del triángulo en una función.
-function areaTriangulo(base,altura){
-    return (base*altura)/2;
+function areaTriangulo(lado1,lado2,base){
+    return base*((alturaTriangulo(lado1,lado2,base))/2);
 }
 
 //Encapsulando la formula del diámetro del círculo en una función.
@@ -40,4 +40,50 @@ function perimetroCirculo(radio){
 //Calculando el área del círculo.
 function areaCirculo(radio){
     return Math.PI*Math.pow(radio,2);
+}
+
+//Conectando JS con HTML
+
+//Cuadrado
+function calcularPerimetroCuadrado(){
+    const lado=parseFloat(document.getElementById('cuadrado').value);
+    alert("El perímetro del cuadrado mide: "+perimetroCuadrado(lado));
+}
+
+function calcularAreaCuadrado(){
+    const lado=parseFloat(document.getElementById('cuadrado').value);
+    alert("El área del cuadrado mide: "+areaCuadrado(lado));
+}
+
+//Triángulo
+function calcularPerimetroTriangulo(){
+    const lado1=parseFloat(document.getElementById('lado1').value);
+    const lado2=parseFloat(document.getElementById('lado2').value);
+    const base=parseFloat(document.getElementById('base').value);
+    alert("El perímetro del triángulo mide: "+perimetroTriangulo(lado1,lado2,base));
+}
+
+function calcularAreaTriangulo(){
+    const lado1=parseFloat(document.getElementById('lado1').value);
+    const lado2=parseFloat(document.getElementById('lado2').value);
+    const base=parseFloat(document.getElementById('base').value);
+    alert("El área del triángulo mide: "+areaTriangulo(lado1,lado2,base));
+}
+
+function calcularAlturaTriangulo(){
+    const lado1=parseFloat(document.getElementById('lado1').value);
+    const lado2=parseFloat(document.getElementById('lado2').value);
+    const base=parseFloat(document.getElementById('base').value);
+    alert("La altura del triángulo respecto de la base mide: "+alturaTriangulo(lado1,lado2,base));
+}
+
+//Círculo
+function calcularPerimetroCirculo(){
+    const radio=parseFloat(document.getElementById('radio').value);
+    alert("El perímetro del círculo mide: "+perimetroCirculo(radio));
+}
+
+function calcularAreaCirculo(){
+    const radio=parseFloat(document.getElementById('radio').value);
+    alert("El área del círculo mide: "+areaCirculo(radio));
 }
