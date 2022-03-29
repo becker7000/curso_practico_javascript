@@ -3,7 +3,7 @@ body{
     font-family: 'Quicksand',sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #c2cfcf;
+    background-color: #121000;
 }
 
 header{
@@ -42,7 +42,7 @@ section{
     justify-content: center;
     width: 80%;
     padding: 28px;
-    background-color: #333ccc;
+    background-color: #000077;
     border-radius: 8px;
 }
 
@@ -92,6 +92,7 @@ form{
     border-radius: 4px;
     text-align: center;
     color: #500050;
+    background-color: wheat;
 }
 
 .container .cuadrado button,
