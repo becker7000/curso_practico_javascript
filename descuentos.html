@@ -2,39 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estiloDescuentos.css">
     <title>Descuentos.</title>
 </head>
 <body>
 
     <header>
-        <h1>
-            Porcentajes y descuentos.
-        </h1>
-        <p>Calcula cuanto te costaría un producto ya con el descuento aplicado.</p>
+        <div class="header">
+            <h1>
+                Porcentajes y descuentos.
+            </h1>
+            <p>
+                Calcula cuanto te costaría un producto ya con el descuento aplicado.
+            </p>    
+        </div>
     </header>
 
     <section>
 
-        <article>
-            <h2>Calcular precio con descuento.</h2>
-            <form action="">
+        <div class="container">
 
-                <label for="precio">Escribe el precio: </label>
-                <input id="precio" type="number" placeholder="$200" required>
+            <article class="descuentos">
+                <h2>Calcular precio con descuento.</h2>
+                <form action="">
+    
+                    <label for="precio">Escribe el precio: </label>
+                    <input id="precio" type="number" placeholder="$200" required>
+    
+                    <label for="descuento">Escribe el porcentaje de descuento: </label>
+                    <input id="descuento" type="number" placeholder="15%">
+    
+                    <label for="cupon">Elige un cupon de descuento: </label>
+                    <select id="cupon">
+                        <option value="1">Ninguno</option>
+                        <option value="2">bckr05</option>
+                        <option value="3">bckr10</option>
+                        <option value="4">bckr12</option>
+                    </select>
+    
+    
+                    <button type="button" onclick="aplicarDescuento();">
+                        Calcular el precio con descuento. 
+                    </button>
+    
+                    <p id="mostrador" class="mostrador"></p>
+    
+                </form>
+            </article>
 
-                <label for="descuento">Escribe el porcentaje de descuento: </label>
-                <input id="descuento" type="number" placeholder="15%" required>
-
-                <button type="button" onclick="aplicarDescuento();">
-                    Calcular el precio con descuento. 
-                </button>
-
-                <p id="mostrador"></p>
-
-            </form>
-        </article>
+        </div>
 
     </section>
     

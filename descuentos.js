@@ -8,9 +8,28 @@ function calcularPrecioConDescuento(precio,descuento){
 
 function aplicarDescuento(){
     const precio=parseFloat(document.getElementById('precio').value);
-    const descuento=parseFloat(document.getElementById('descuento').value);
+    let descuento=parseFloat(document.getElementById('descuento').value);
+    let cupon=parseInt(document.getElementById('cupon').value);
+    switch(cupon){
+        case 1: 
+            descuento+=0;
+            cupon="Ninguno";
+            break;
+        case 2: 
+            descuento+=5;
+            cupon="bckr05";
+            break;
+        case 3: 
+            descuento+=10;
+            cupon="bckr10";
+            break;
+        case 4:
+            descuento+=12;
+            cupon="bckr12";
+            break;
+    }
     const precioFinal=calcularPrecioConDescuento(precio,descuento);
     const mostrar=document.getElementById('mostrador');
-    mostrar.innerText="El precio ya con el descuento aplicado es: $"+precioFinal;
+    mostrar.innerText="El precio ya con el descuento aplicado es: $"+precioFinal+" | Cupón: "+cupon;
 }
 

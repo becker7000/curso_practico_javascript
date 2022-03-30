@@ -69,22 +69,17 @@ form{
     justify-content: space-around;
 }
 
-.container .cuadrado,
-.container .triangulo,
-.container .circulo {
+.container .descuentos {
     color: #000033;
 }
 
-.container .cuadrado label,
-.container .triangulo label,
-.container .circulo label {
+.container .descuentos label {
     margin-top: 4px;
-    font-weight: bold;
+    font-weight: bold;   
 }
 
-.container .cuadrado input,
-.container .triangulo input,
-.container .circulo input {
+.container .descuentos input,
+.container .descuentos select {
     margin: 4px 0 8px 0;
     border: none;
     padding: 4px;
@@ -95,30 +90,17 @@ form{
     background-color: wheat;
 }
 
-.container .cuadrado button,
-.container .triangulo button,
-.container .circulo button {
+.container .descuentos button{
     border: none;
     margin: 8px;
     height: 32px;
     border-radius: 8px;
     background-color: #005000;
-    color: wheat;
+    color: wheat;    
 }
 
 button:hover{
     font-weight: bold;
-}
-
-.lados-tri{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.lados-tri input {
-    width: 54px;
-    text-align: center;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
