@@ -15,6 +15,6 @@ function calcularMediana(listaEntrada){
     else
      mediana = lista[mitad];
 
-    return mediana;
+    return "La mediana es: "+mediana;
 
 }
